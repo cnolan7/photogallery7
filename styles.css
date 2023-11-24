@@ -16,15 +16,16 @@ p{
 
 }
 
-figcaption, label, input, small{
+figcaption, label, input{
     font-size: 1em;
-    columns: #000000;
+    color: #000000;
 }
 
 input, textarea{
     background-color: #000000;
     color: #ffffff;
-    border: 1 px solid #ffffff;
+    border: 1px solid #ffffff;
+    font-size: 1em;
 }
 
 nav{
@@ -76,9 +77,17 @@ h3{
     font-size: 1em;  
 }
 
-header, footer{
+header{
     background-color: #000000;
     color: #ffffff;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    background-color: #000000;
 }
 
 section{
@@ -107,6 +116,8 @@ button{
     margin: auto;
     max-width: 95%;
     background-color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
     
 }
 
@@ -122,36 +133,34 @@ button{
     color: #000000;
 }
 
+
+.gallery .gallery-item h2{
+    text-align: center;
+    color: #007d7b
+}
+
 .gallery .gallery-item{
     
     display: grid;
-    grid-template-columns: repeat(3, 1fr );
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
     margin-top: 20px;
-    width:auto;
-    border: #000000;
     background-color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
 
-    /**box-sizing: border-box;
-    margin: 0.5%;
-    overflow: hidden;
-    position: relative;
-    background: #fff;
-    border: 1px solid #ddd;
-    padding-bottom: 56.25%;
-    height: 0;*//
+   
 }   
 
 .gallery-item img{
-    width: auto;
+    width: 100%;
     height: auto;
-    position: relative;
-    top: 0;
-    left: 0;
+    display: block;
 }
 
 .gallery-item figcaption{
-    place-content: top;
+    justify-content: center;
+    align-items: start;
     bottom:0;
     left: 0;
     width: 100%;
@@ -160,6 +169,11 @@ button{
     color: #fff;
     text-align: center;
     font-size: 0.9em;
+}
+
+input::placeholder, textarea::placeholder{
+    color: #007d7b;
+    text-transform: uppercase;
 }
 
 #contact{
@@ -184,7 +198,8 @@ button{
     margin: auto;
     display: flex;
     flex-direction: column;
-    
+    color: #007d7b;
+  
 }
 
 #contact label{
@@ -198,36 +213,30 @@ button{
     width: 100%;
     margin-top: 10px;
     padding: 10px;
-    border: none;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     background-color: #ffffff;
     color:#007d7b;
+    font-size: 1em;
 }
 
 #contact button{
-    width: 100%;
+    width: 90%;
     padding: 10px;
     cursor: pointer;
     background-color: #007d7b;
     color:#ffffff;
     border: 1px solid #ffffff;
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 10px auto;
     font-size: 1em;
 }
 
-footer{
-    text-align: center;
-    padding: 10px 0;
-    background-color: black;
-    color: white;
-}
 
 
 @media (max-width: 485px) {
-    .gallery-item{
-        display: block;
-        width:100%;
+    .gallery .gallery-item{
+        grid-template-columns: repeat(2, 1fr);
     }
 
     nav ul{
@@ -244,10 +253,11 @@ footer{
 
 }
 
-@media (min-width: 486) and (max-width: 879px) {
-    .gallery-item{
-        display: inline-block;
-        width:50%;
+@media (min-width: 486px) and (max-width: 879px) {
+    .gallery .gallery-item{
+        grid-template-columns: 1fr;
+        /*display: inline-block;
+        width:50%;*/
     }
     nav ul{
         justify-content: center;
