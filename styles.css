@@ -249,7 +249,7 @@ input::placeholder, textarea::placeholder{
 
 
 
-@media (max-width: 485px) {
+@media (min-width: 485px) {
     .gallery .gallery-item{
         grid-template-columns: 1fr;
     }
