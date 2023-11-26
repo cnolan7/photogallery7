@@ -283,7 +283,7 @@ input::placeholder, textarea::placeholder{
 
 }
 
-@media (min-width: 880px) {
+@media (max-width: 880px) {
     .gallery-item{
         display: grid;
         width:33.3333%;
