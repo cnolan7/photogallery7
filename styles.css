@@ -249,24 +249,6 @@ input::placeholder, textarea::placeholder{
 
 
 
-@media (max-width: 485px) {
-    .gallery .gallery-item{
-        grid-template-columns: 1fr;
-    }
-
-    nav ul{
-        justify-content: center;
-    }
-
-    #contact {
-        padding: 10px;
-    }
-
-    #contact form{
-        width: 100%;
-    }
-
-}
 
 @media (min-width: 486px) and (max-width: 879px) {
     .gallery .gallery-item{
@@ -283,7 +265,7 @@ input::placeholder, textarea::placeholder{
 
 }
 
-@media (max-width: 880px) {
+@media (min-width: 880px) {
     .gallery-item{
         display: grid;
         width:33.3333%;
