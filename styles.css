@@ -250,9 +250,9 @@ input::placeholder, textarea::placeholder{
 
 
 
-@media (min-width: 486px) and (max-width: 879px) {
+@media (min-width: 486px) {
     .gallery .gallery-item{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     nav ul{
@@ -266,7 +266,8 @@ input::placeholder, textarea::placeholder{
 }
 
 @media (min-width: 880px) {
-    .gallery-item{
+    .gallery .gallery-item{
+        grid-template-columns: repeat(2, 1fr);
         display: grid;
         width:33.3333%;
     }
