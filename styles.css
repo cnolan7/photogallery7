@@ -1,4 +1,4 @@
-#top {
+#top{
     color:#007d7b;
     background-color: #ffffff;    
 }
@@ -249,10 +249,31 @@ input::placeholder, textarea::placeholder{
 
 
 
-
-@media (min-width: 486px) {
+@media (max-width:880px){
     .gallery .gallery-item{
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    nav ul{
+        justify-content: center;
+    }
+
+    #contact {
+        padding: 10px;
+    }
+
+    #contact form{
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 1300px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+
     }
 
     nav ul{
@@ -265,18 +286,5 @@ input::placeholder, textarea::placeholder{
 
 }
 
-@media (min-width: 880px) {
-    .gallery .gallery-item{
-        grid-template-columns: repeat(2, 1fr);
-        display: grid;
-        width:33.3333%;
-    }
-    nav ul{
-        justify-content: right;
-    }
 
-    #contact form{
-        width: 60%;
-    }
-}
 
